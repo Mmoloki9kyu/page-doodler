@@ -1,0 +1,74 @@
+═══════════════════════════════════════════════════
+ CHROME WEB STORE LISTING — Page Doodler v1.7
+═══════════════════════════════════════════════════
+
+
+─── CATEGORY ───
+Productivity
+
+
+─── LANGUAGE ───
+English
+
+
+─── DESCRIPTION (store listing) ───
+
+Draw, annotate, and mark up any webpage — right in your browser.
+
+Page Doodler adds a floating canvas overlay to any page so you can sketch ideas, highlight content, leave notes, and share annotated screenshots. Your doodles are saved per URL and reload automatically when you return.
+
+DRAWING TOOLS
+- Pen with smooth, pressure-friendly strokes
+- Eraser to clean up mistakes
+- Text tool — click anywhere to type annotations
+- 6 shapes: rectangle, rounded rectangle, circle, triangle, diamond, star
+- 5 line styles: solid, dashed, dotted, arrow, double arrow
+- Full color picker and adjustable brush size (1–100)
+
+WORKFLOW
+- Undo / Redo / Clear with keyboard shortcuts (Ctrl+Z, Ctrl+Y)
+- Save doodles per page — they reload when you come back
+- Export your doodle as a transparent PNG
+- Screenshot the page with your doodles composited on top
+- Region select tool for cropping screenshots to a specific area
+- Scroll the page underneath while doodling
+
+Works on any webpage. Click the palette icon or use the popup to start doodling.
+
+
+─── SINGLE PURPOSE DESCRIPTION ───
+
+Draw annotations and doodles on any webpage and save them per URL.
+
+
+─── PERMISSION JUSTIFICATIONS ───
+
+activeTab:
+Required to interact with the currently active tab so the drawing canvas can be injected and displayed on the page the user is viewing.
+
+storage:
+Required to save the user's doodles per URL so they persist between browser sessions and reload automatically when the user revisits a page. Also stores user preferences for tool settings (brush size, shape type, line type, screenshot mode).
+
+scripting:
+Required to inject the drawing canvas and toolbar into pages where the content script has not yet loaded, such as tabs that were open before the extension was installed.
+
+host_permissions (<all_urls>):
+Required for two purposes: (1) to inject the drawing canvas on any webpage the user wants to annotate, and (2) to capture visible tab screenshots so the user can export a composite image of the page with their doodles overlaid.
+
+
+─── DATA USE DISCLOSURES ───
+
+Does this extension collect or use personal data?
+NO
+
+Does this extension sell data to third parties?
+NO
+
+Does this extension use or transfer data for purposes unrelated to the extension's core functionality?
+NO
+
+Does this extension use or transfer data for creditworthiness or lending purposes?
+NO
+
+Certification statement:
+All data (doodle strokes and tool preferences) is stored locally on the user's device using Chrome's storage API. No data is collected, transmitted, or shared with any server or third party. The extension works entirely offline after installation.
