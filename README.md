@@ -6,6 +6,10 @@ Page Doodler adds a floating canvas overlay to any page so you can sketch ideas,
 
 > **Want to install it yourself?** [Jump to manual install instructions ↓](#install-it-yourself)
 
+## Demo
+
+[![Watch the demo](https://img.youtube.com/vi/n4b-MKcvvq8/maxresdefault.jpg)](https://www.youtube.com/watch?v=n4b-MKcvvq8)
+
 ![Screenshot](screenshot-1.png)
 
 ## Features
