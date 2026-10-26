@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 260px;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .header .icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .header p {
+      font-size: 11px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .toggle-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+    }
+
+    .toggle-btn.off {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    .toggle-btn.off:hover {
+      background: #5558e6;
+    }
+
+    .toggle-btn.on {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .toggle-btn.on:hover {
+      background: rgba(239, 68, 68, 0.25);
+    }
+
+    .toggle-btn.error {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 12px;
+    }
+
+    .saved-list {
+      margin-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 12px;
+    }
+
+    .saved-list h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .saved-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+
+    .saved-item .url {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #aaa;
+      max-width: 170px;
+    }
+
+    .saved-item .delete-btn {
+      background: none;
+      border: none;
+      color: #666;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 4px;
+    }
+
+    .saved-item .delete-btn:hover {
+      color: #f87171;
+    }
+
+    .empty-state {
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .shortcuts {
+      margin-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 10px;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .shortcuts kbd {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: inherit;
+      font-size: 10px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="icon">🎨</span>
+    <div>
+      <h1>Page Doodler</h1>
+      <p>Draw on any webpage</p>
+    </div>
+  </div>
+
+  <button class="toggle-btn off" id="toggleBtn">Start Doodling</button>
+
+  <div class="saved-list">
+    <h3>Saved Doodles</h3>
+    <div id="savedList"></div>
+  </div>
+
+  <div class="shortcuts">
+    <kbd>Ctrl</kbd>+<kbd>Z</kbd> Undo &nbsp;
+    <kbd>Ctrl</kbd>+<kbd>Y</kbd> Redo<br>
+    <kbd>Ctrl</kbd>+<kbd>S</kbd> Save &nbsp;
+    <kbd>Esc</kbd> Exit
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
